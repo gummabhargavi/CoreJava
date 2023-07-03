@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+   <script>
+      function Validate(){
+        if(document.myForm.EMail.value ==""){
+           alert("Please provide your Email Id");
+           document.myForm.EMail.focus()
+           return false
+      }else if(document.myForm.Password.value ==""){
+          alert("please provide your Password");
+          document.myForm.Password.focus()
+          return false
+
+    }
+      else{
+           return true
+      }
+
+     }
+
+   </script>
+ </head>     
+<body>
+        <form action="message.html" name="myForm" onsubmit="return(Validate());">
+             <input  name="EMail" placeholder="email" type="text"/><br/><br/>
+            <input name="Password" placeholder="Password" type="text" /><br/><br/>
+           <button type="submit">Submit</button>  
+ 
+        </form>
+</body>
+</html>
